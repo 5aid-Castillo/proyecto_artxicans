@@ -1,0 +1,1 @@
+Se modifico el index, se agregaron nuevos archivos y se descargo los archivos de bootstrap
