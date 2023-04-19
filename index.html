@@ -13,12 +13,20 @@
     <meta name="keyword" content="artesanias, handicraft, mexican, mexico," />
     <meta name="description" content="Artesanias Mexicanas" />
     <!-- Styles -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="node_modules/swiper/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="./styles/bootstrap-5.2.3-dist/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="./styles/home/products.css">
     <link rel="shortcut icon" href="/assets/logo/a.png" />
-    <link rel="stylesheet" href="./styles/header/header.css" />
-    <link rel="stylesheet" href="./styles/header/header.scss" />
+    <link rel="stylesheet" href="./styles/home/carousel.css" />
     <link rel="stylesheet" href="./styles//home/searchbox.css" />
     <link rel="stylesheet" href="./styles/footer/footer.css" />
     <link rel="stylesheet" href="./styles/home/main.css" />
+    <link rel="stylesheet" href="./styles/header/header.css" />
     <link rel="stylesheet" href="index.css" />
 
     <!-- GoogleIcons -->
@@ -34,7 +42,7 @@
     <header class="header">
       <nav class="navigation">
         <div class="logo">
-          <a href="index.html"><img src="./assets/imgimg.jpg" />Artxicans</a>
+          <a href="index.html"><!-- <img src="./assets/imgimg.jpg" /> -->Artxicans</a>
         </div>
         <button class="burger-btn">
           <svg
@@ -61,18 +69,38 @@
         <div class="navbar" id="navbar">
           <ul class="navList">
             <li class="navItem"><a href="">Inicio</a></li>
-            <li class="navItem"><a href="">Categorias</a></li>
+            <li class="navItem dropdown">
+              <a
+                class="dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                href=""
+                >Categorias</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Alebrijes</a></li>
+                <li><a class="dropdown-item" href="#">Arte Huichol</a></li>
+                <li><a class="dropdown-item" href="#">Juguetes</a></li>
+                <li><a class="dropdown-item" href="#">Joyeria</a></li>
+                <li><a class="dropdown-item" href="#">Ropa</a></li>
+                <li><a class="dropdown-item" href="#">Rebozos</a></li>
+                <li><a class="dropdown-item" href="#">Sombreros</a></li>
+                <li><a class="dropdown-item" href="#">Zapatos</a></li>
+                <li><a class="dropdown-item" href="#">Otros...</a></li>
+                
+              </ul>
+            </li>
             <li class="navItem"><a href="">Mis Compras</a></li>
             <li class="navItem"><a href="./pages/sell.html">Vender</a></li>
-            <li class="navItem"><a href="">Ayuda</a></li>
+            <li class="navItem"><a href="./pages/help.html">Ayuda</a></li>
 
             <div class="headerBtn">
               <!-- <a href="#login"> -->
-              <button class="btn loginBtn" onclick="location.href='#login'">
+              <button class="loginBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <a>Ingresa</a>
               </button>
               <!-- </a> -->
-              <button class="btn signBtn" onclick="location.href='#signup'">
+              <button class="btn-header2 signBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
                 <a>Regístrate</a>
               </button>
             </div>
@@ -83,25 +111,16 @@
 
     <!-- Login and Signup Modals -->
     <!-- Login modal -->
-    <article class="modal" id="login">
-      <div class="modal-content">
-        <a href="#close" class="modal-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"
-            />
-          </svg>
-        </a>
-        <article class="all-modal">
-          <div class="all-info">
-            <h3>Inicio de sesión</h3>
-          </div>
-          <form
+   
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Inicio de sesión</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form
             action=""
             method="POST"
             class="login-form box-shadow-1"
@@ -130,74 +149,86 @@
             </div>
             <button type="submit" class="start">Iniciar</button>
           </form>
-        </article>
       </div>
-    </article>
+    </div>
+  </div>
+</div>
 
-    <!-- Signup modal -->
-    <article class="modal" id="signup" method="POST">
-      <div class="modal-content">
-        <a href="#close" class="modal-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"
-            />
-          </svg>
-        </a>
-        <article class="all-modal">
-          <div class="all-info">
-            <h3>Regístrate</h3>
-          </div>
-          <form
-            action=""
-            method="POST"
-            class="login-form box-shadow-1"
-            id="form-signup"
-          >
-            <div class="i-login">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Nombre"
-                title="Name only accepts letters and blank spaces"
-                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-                required
-              />
-              <span class="barra"></span>
-            </div>
-            <div class="i-login">
-              <input
-                type="email"
-                name="email-r"
-                id="email-r"
-                title="Wrong email"
-                placeholder="Ingresa tu correo"
-                required
-              />
-              <span class="barra"></span>
-            </div>
-            <div class="i-login">
-              <input
-                type="password"
-                name="password-r"
-                id="password-r"
-                placeholder="Contraseña"
-                required
-              />
-              <span class="barra"></span>
-            </div>
-            <button type="submit" class="start">Iniciar</button>
-            <p class="warnings" id="warnings"></p>
-          </form>
-        </article>
+<!-- Signup Modal -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Regístrate</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </article>
+      <div class="modal-body">
+        <form
+        action=""
+        method="POST"
+        class="login-form box-shadow-1"
+        id="form-signup"
+      >
+        <div class="i-login">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nombre"
+            title="Name only accepts letters and blank spaces"
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            required
+          />
+          <span class="barra"></span>
+        </div>
+        <div class="i-login">
+          <input
+            type="email"
+            name="email-r"
+            id="email-r"
+            title="Wrong email"
+            placeholder="Ingresa tu correo"
+            required
+          />
+          <span class="barra"></span>
+        </div>
+        <div class="i-login">
+          <input
+            type="password"
+            name="password-r"
+            id="password-r"
+            placeholder="Contraseña"
+            required
+          />
+          <span class="barra"></span>
+        </div>
+        <button type="submit" class="start">Registrarse</button>
+        <p class="warnings" id="warnings"></p>
+      </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    <!-- Modal user-mobile -->
+    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Mi Cuenta</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <div class="mobs">
+            <button class="btn-mob-1">Inicio de sesion</button>
+            <button class="btn-mob-2">Regístrate</button>
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Aqui empieza el body -->
 
     <!-- SearchBox -->
 
@@ -207,39 +238,36 @@
         <button class="material-symbols-outlined searchButton">search</button>
       </div>
       <div class="user">
-          <a href="#user-mob">
-            <img src="./assets/utilities/usuario.png" alt="icon" class="icon" />
-          </a>
+        <a data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+          <img src="./assets/utilities/usuario.png" alt="icon" class="icon" />
+        </a>
       </div>
     </form>
-    <!-- Modal user-mobile -->
-    <article class="modal" id="user-mob">
-      <div class="modal-content">
-        <a href="#close" class="modal-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"
-            />
-          </svg>
-        </a>
-        <article class="all-modal">
-          <div class="all-info">
-            <h3>Mi Cuenta</h3>
-          </div>
-          <div class="mobs">
-            <button class="btn-mob-1">Inicio de sesion</button>
-            <button class="btn-mob-2">Regístrate</button>
-          </div>
-        </article>
-      </div>
-    </article>
 
+   <!-- LIST OF PRODUCTS -->
+   <section class='container-products'>
+    <div class='mainContent grid'>        
+      
+        <div class="single-product">
+            <div class='imgDiv'>
+                <img src="assets/products/ambar.jpg"  alt="">
+            </div>
+            <div class="card-info">
+                <span class="product-title">Ambar</span>
+                <span class="price">$700</span>
+                <span class="shipping">Más envio de importación</span>
+                <!--  <div className="">
+                            <span>Estrellas</span>
+                            <span>120</span>
+                        </div>
+                        <span className="">Vendido por:</span><span className="">Said Castillo</span> 
+            </div> -->
+        </div>
 
+    </div>
+    </section>
+<!--  -->
+    <!-- Footer -->
     <footer class="footer">
       <small>Terminos y Condiciones</small>
       <small>Privacidad</small>
@@ -248,18 +276,8 @@
     </footer>
     <script src="./js/regex.js"></script>
     <script src="./js/Burgerbtn.js"></script>
+    <script src="./styles/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    
+   
   </body>
 </html>
-
-<!-- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("form-signup").addEventListener("submit", validar);
-  });
-
-  function validar(e) {
-    e.preventDefault();
-    const clave = document.getElementById("password").value;
-    alert("");
-  }
-</script>
- -->

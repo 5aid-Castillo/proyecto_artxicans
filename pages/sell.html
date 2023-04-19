@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="/assets/logo/a.png" />
-    <link rel="stylesheet" href="../styles/header/header.css"">
     <link rel="stylesheet" href="../styles/pages/sellers.css">
+    <link rel="stylesheet" href="../styles/header/header.css"">
     <link rel="stylesheet" href="../index.css"> 
 
-    <title>Artxicans</title>
+
+    <title>Sell -Artxicans</title>
 </head>
 <body>
 
@@ -17,7 +19,7 @@
     <header class="header">
         <nav class="navigation">
             <div class="logo">
-                <a href="../index.html"><img src="../assets/imgimg.jpg">Artxicans</a>
+                <a href="../index.html"><!-- <img src="../assets/imgimg.jpg"> -->Artxicans</a>
             </div>
             <button class="burger-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"/></svg>
@@ -26,11 +28,21 @@
 
             <div class="navbar" id="navbar">
                 <ul class="navList">
-                    <li class="navItem"><a href="">Inicio</a></li>
+                    <li class="navItem"><a href="../index.html">Inicio</a></li>
                     <li class="navItem"><a href="">Categorias</a></li>
                     <li class="navItem"><a href="">Mis Compras</a></li>
-                    <li class="navItem"><a href="./pages/sell.html">Vender</a></li>
-                    <li class="navItem"><a href="">Ayuda</a></li>
+                    <li class="navItem"><a href="./sell.html">Vender</a></li>
+                    <li class="navItem"><a href="./help.html">Ayuda</a></li>
+                    <div class="headerBtn">
+                        <!-- <a href="#login"> -->
+                        <button class="loginBtn" onclick="location.href='#login'">
+                          <a>Ingresa</a>
+                        </button>
+                        <!-- </a> -->
+                        <button class="signBtn" onclick="location.href='#signup'">
+                          <a>Regístrate</a>
+                        </button>
+                      </div>
                 </ul>
             </div>
         </nav>
@@ -48,17 +60,85 @@
     </section>
 
     <section class="sign-sellers">
-        <h3>Registrarme ahora para vender</h3>
-        <button class="sign-btn">Registrarte</button>
-    </section>
-    <h3>Conoce los requisitos para vender</h3>
-      <h3>Artxicans permite la venta unicamente de productos y artesanias mexicanas</h3>
-      <h3>Preguntas frecuentes</h3>
-      <h5>Que tipos de productos no se pueden publicar en artxicans</h5>
-      <h5>Como funciona la Logistica de artxicans</h5>
-      <h5>Cuanto cuesta vender en artxicans</h5>
-      <h5>Como recibo mis pagos?</h5>
+        <h3>Empieza <span class="underlined underline-clip">ahora</span> para <span class="underlined underline-clip1">vender</span></h3>
+        <div class="btn-center">
+            <button class="sign-btn" onclick="location.href='./reg_seller.html'">Registrarte</button>
+        </div> 
+        </section>
+      <div class="req">
+         <h3>¡Conoce los requisitos para vender!</h3>
+       </div>
+       <div class="img-cen">
+            <img src="../assets/utilities/brett.jpg" alt="Image">
+       </div>
+      <div class="inf-container">
+        <div class="inf-art">
+            <h3>Artxicans permite únicamente la venta de productos y artesanías mexicanas.</h3>
+        </div>
+    
+        <h3 class="title-question">Preguntas frecuentes:</h3>
+<!-- Pregunta1 -->
+        <div class="info-collapse">
+            <p>
+                <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  ¿Que tipos de productos no se pueden publicar en Artxicans?
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  Algunos productos se encuentran prohibidos y restringidos debido a múltiples razones, tales como seguridad, salud y lamentablemente fragilidad de algunos productos.
+                  Para obtener información detallada sobre que productos no pueden venderse en Artxicans, consulta el documento de ayuda <strong>Restricciones de productos</strong>
+                </div>
+              </div>
+        </div>
+<!-- Pregunta 2 -->
+        <div class="info-collapse">
+            <p>
+                <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  ¿Cuánto cuesta vender en Artxicans?
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample2">
+                <div class="card card-body">
+                  Se cobraran $ MXN y más una pequena tarifa por cada venta de tú artículo, la tarifa puede variar según el costo de tu producto.
+                  Consulta el documento de <strong>Más información sobre tarifas y precios</strong>
+                </div>
+              </div>
+        </div>
+<!-- Pregunta 3 -->
+        <div class="info-collapse">
+            <p>
+                <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  ¿Cómo recibo mis pagos?
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample3">
+                <div class="card card-body">
+                  Artxicans deposita tus pagos en tu cuenta bancaria y te notificara cada vez que se haya realizado el depósito. 
+                </div>
+              </div>
+        </div>
+<!-- Pregunta 4 -->
+        <div class="info-collapse">
+            <p>
+                <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  ¿Cómo funciona la logística de Artxicans?
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample4">
+                <div class="card card-body">
+                  Logística de Artxicans es un servicio que te permite enviar tus productos de artesanias mexicanas en cualquiera de las paqueterías existentes.
+                  Cuando un cliente hace un pedido ....  
+                </div>
+              </div>
+        </div>
+        
+    </div>
+
+
+      
 
       <script src="../js/Burgerbtn.js"></script>
+      <script src="../styles/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

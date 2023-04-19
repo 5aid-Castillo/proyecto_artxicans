@@ -4,9 +4,11 @@
     display: flex;
     justify-content: space-around;
     margin-top: 1.5rem;
+    
 }
 .searchBox{
     position: relative;
+    z-index: 999;
 }
 .searchButton{
     position: absolute;
