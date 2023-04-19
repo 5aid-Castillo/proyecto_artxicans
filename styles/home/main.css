@@ -177,16 +177,3 @@
     width: 50%;
   }
 }
-
-/* <<<<<<< HEAD
-@media screen and (min-width: 1024px) {
-  .all-modal {
-    width: 50vw;
-  }
-}
-=======
-@media screen and (min-width:1024px){
-    .all-modal{
-        width: 35vw;
-    }
-} */
