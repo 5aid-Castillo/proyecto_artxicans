@@ -1,59 +1,4 @@
-/* Modal */
-/* .modal{
-    position: fixed;
-    z-index: 999;
-    top:0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 1s;
-}
-.modal-content{
-    position: relative;
-}
-.modal-close{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-.modal-close svg{
-    width:2.4rem;
-    height: 2.4rem;
-    fill: var(--second-alpha-color);
-}
-.modal[id|="login"]:target{
-    opacity: 1;
-    pointer-events: auto;
-}
-.modal[id|="signup"]:target{
-    opacity: 1;
-    pointer-events: auto;
-}
-.modal[id|="user-mob"]:target{
-    opacity: 1;
-    pointer-events: auto;
-}
-.all-modal{
-    
-    padding: 1.5rem;
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-}
-.all-modal h3{
-    border-bottom: medium solid var(--first-color);
-    margin: 1rem auto;
-    padding: .5rem 0;
-    color: black;
-}
- */
+
 /* Login inputs */
 .login-form .i-login {
   position: relative;
@@ -82,7 +27,7 @@
   display: block;
   width: 100%;
 }
-
+/* 
 .barra::before {
   content: "";
   height: 2px;
@@ -96,7 +41,7 @@
   );
   transition: 0.3s ease width;
   left: 0;
-}
+} */
 
 .i-login input:focus ~ .barra::before {
   width: 100%;
@@ -105,9 +50,11 @@
 .warnings {
   width: 200px;
   text-align: center;
+  background-color: #cc0000;
   margin: auto;
-  color: #b06ab3;
-  padding-top: 20px;
+  color: white;
+  border-radius: 10px;
+  
 }
 
 .start {

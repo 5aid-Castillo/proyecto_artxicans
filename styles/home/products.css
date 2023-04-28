@@ -42,9 +42,11 @@
     padding: 0.5rem 1rem;
     display: flex;
     flex-flow: column;
+    flex-wrap: wrap;
 }
 .card-info * + *{
-    margin-bottom: 0.5em;
+    display: block;
+    margin-bottom: 1rem;
 }
 .price{
     font-weight: bold;
@@ -52,7 +54,7 @@
 }
 .product-title{
     font-weight: bold;
-    
+    color: black;
 }
 .shipping{
     color: var(--second-alpha-color);
@@ -62,6 +64,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 /* Desktop */
 @media screen and (min-width:420px){
     .mainContent{
